@@ -37,6 +37,13 @@ $(function(){
         }
     });
 
+    $("#newItemsLoadMore").click(function(){
+        $("#newBoxs .newBox:hidden").slice(0, 4).slideDown()
+            if(($("#newBoxs .newBox:hidden")).length == 0 ){
+            $("#newItemsLoadMore").fadeOut("slow")
+        }
+    });
+
     // Collections slider
     $(".collections__inner").slick({
         dots: false,
