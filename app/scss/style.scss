@@ -400,7 +400,8 @@
 // End slider
 
 // Start sales-leaders
-.sales-leaders{
+.sales-leaders,
+.new-items{
     padding: 100px 0;
 
     &__title{
@@ -424,7 +425,8 @@
         padding: 30px;
         transition: all 0.3s;
 
-        & .sales-leaders__hidden{
+        & .sales-leaders__hidden,
+        .new-items__hidden{
             opacity: 0;
             transition: all 0.3s;
         }
@@ -546,9 +548,12 @@
     &__inner:hover{
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 
-        & .sales-leaders__hidden{
+        & .sales-leaders__hidden,
+        .new-items__hidden{
             opacity: 1;
         }
+
+        
     }
 
     &__buy{
@@ -579,7 +584,8 @@
         background-color: $text;
     }
 
-    &__loadMore{
+    &__loadMore,
+    &_newItemsLoadMore{
         font-size: 14px;
         line-height: 1.715;
         @include f600;
@@ -597,7 +603,8 @@
         cursor: pointer;
     }
 
-    &__loadMore::after{
+    &__loadMore::after,
+    &_newItemsLoadMore::after{
         content: "+";
         position: absolute;
         top: 50%;
@@ -607,13 +614,18 @@
         transform: translateY(-50%);
     }
 
-    &__loadMore:hover{
+    &__loadMore:hover,
+    &newItemsLoadMore:hover{
         border-color: $text;
     }
 }
 
 // Количество карточек до нажатения кнопки Load More 
 #boxs .box:nth-child(n + 4){
+    display: none;
+}
+
+#newBoxs .newBox:nth-child(n + 4){
     display: none;
 }
 
@@ -630,7 +642,6 @@
 
 // Start collections 
 .collections{
-    padding-bottom: 150px;
 
     &__mainTitle{
         margin-bottom: 20px;
