@@ -3,12 +3,14 @@ $(function(){
     $("#search").click(function(){
         $(".menu-item").addClass("hide-item");
         $(".header__search-form").addClass("active");
+        $(".header__box--left").addClass("active");
         $(".close").addClass("active");
         $("#search").hide();
     })
     $(".close").click(function(){
         $(".menu-item").removeClass("hide-item");
         $(".header__search-form").removeClass("active");
+        $(".header__box--left").removeClass("active");
         $(".close").removeClass("active");
         $("#search").show();
     })
