@@ -1,1 +1,1 @@
-https://katrinzh.github.io/MebelGroup/
+https://katrinzh.github.io/MabelGroup/
